@@ -1,0 +1,68 @@
+<div class="order">
+    <div class="col-lg-6 col-lg-offset-3">
+        <h1>New order</h1>
+      <p ng-show="error">
+         {{message}}
+      </p>
+        <div class="order__info">
+            <form class=""   name="userForm" ng-submit="creat()">
+                <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+                    <label for="name">Name</label>
+                    <input type="text" id='name' name="name" value="" class="form-control input-lg" ng-model="orderData.name" ng-required="true" >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" value="" class="form-control input-lg" ng-model="orderData.email" ng-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Pnone number</label>
+                    <input type="text" ng-minlength="10" ng-maxlength="10" id="phone" name="phone" value="" class="form-control input-lg" ng-model="orderData.phone" ng-required="true">
+           
+                </div>
+
+                <div class="form-group">
+                    <label for="adress">Address</label>
+                    <textarea id="adress" name="adress" value="" class="form-control input-lg" ng-model="orderData.address" ng-required="true"></textarea>
+                </div>
+
+               
+
+                <div class="form-group">
+                    <label for="payment">Payment method</label>
+                    <select id='payment'  name="payment" class="form-control input-lg" ng-model="orderData.paymentMethod" ng-required="true">
+                        <option value="Credit Card">Credit Card</option>
+                    </select>
+                </div>
+        
+    <div class="form-group">
+                <label for="">Card number</label>
+                <input type="text" class="input-block-level" ng-model="orderData.cc" payments-validate="card" class="form-control input-lg" payments-format="card" payments-type-model="type" ng-class="myForm.number.$card.type"/>
+              </div>
+              
+              <div  class="form-group">
+                <label for="">Expiry</label>
+                <input type="text" class="input-block-level" ng-model="orderData.exp" payments-validate="expiry" payments-type-model="type" class="form-control input-lg"  payments-format="expiry" />
+              </div>
+              
+              
+              
+              <div  class="form-group">
+                <label for="">CVC</label>
+                <input type="text" class="input-block-level" ng-model="orderData.cvv" payments-validate="cvc" class="form-control input-lg" payments-format="cvc" payments-type-model="type"/>
+              </div>
+                <div class="form-group">
+                    <label for="annotation">Order note</label>
+                    <textarea id="annotation" name="name" class="form-control" rows="3" ng-model="orderData.annotation"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" name="name"  value="Sumbit" class="btn btn__large">
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

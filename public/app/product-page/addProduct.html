@@ -1,0 +1,46 @@
+<div class="order">
+    <div class="col-lg-6 col-lg-offset-3">
+        <h1>Add Product</h1>
+        <div class="order__info">
+            <form class="" ng-submit="addProduct()" novalidate="">
+                <div class="form-group">
+                    <label for="name">Title</label>
+                    <input type="text" id='name' name="name" value="" class="form-control input-lg" ng-model="newProduct.title">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">description</label>
+                    <input type="text" id="description" name="description" value="" class="form-control input-lg" ng-model="newProduct.description">
+                </div>
+
+               
+
+                <div class="form-group">
+                    <label for="adress">Brand</label>
+                    <input type="text" id="brand" name="brand" value="" class="form-control input-lg" ng-model="newProduct.brand">
+                </div>
+            
+                <div class="form-group">
+                    <label for="adress">Product Type</label>
+                      <input type="text" id='type'  name="type" class="form-control input-lg" ng-model="newProduct.type">
+                </div>
+            
+
+                <div class="form-group">
+                    <label for="annotation">Price</label>
+                      <input type="text" id="price" name="price" class="form-control" rows="3" ng-model="newProduct.price">
+                </div>
+
+               
+
+
+
+                <div class="form-group">
+                    <input type="submit" name="name" value="Sumbit" class="btn btn__large">
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

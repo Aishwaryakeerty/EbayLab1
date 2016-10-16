@@ -1,0 +1,55 @@
+
+<side-menu></side-menu>
+
+<div class="header--static header" scroll ng-class="{'header-static':bigHeader,'header--fixed':!bigHeader,}" >
+  <div class="container-fluid">
+
+    <div class="col-xs-2 col-sm-2 visible-sm visible-xs">
+        <div class="header__mobile__menu">
+            <a href="#" slide-toggle="#slide-menu"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+        </div>
+    </div>
+
+    <div class="col-xs-8 col-sm-8 col-md-3 col-lg-2" >
+        <div class="header__logo--static">
+            <a href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/EBay_logo.png" alt="" widh="100px" height="45px"></a>
+           <form name="search" >
+            <input type="text" ng-model="txt" ng-change="searchProduct()"   class="form-control input-sm" >
+          </form>
+        </div>
+        <div class="header__logo--fixed" ng-hide="bigHeader">
+            <a href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/EBay_logo.png" alt="" widh="100px" height="45px"></a>
+        </div>
+    </div>
+
+    <div class="col-xs-10 col-sm-10 col-md-7 col-lg-8 hidden-xs">
+
+      <div class="header__menu">
+        <nav>
+          <ul>
+            <li><a href="/catalog">Catalog</a></li>
+             <li ng-show="login" ><a href="/products/addProduct">Add Product</a></li>
+             <li ng-show="login" ><a href="/account" >My Account</a></li>
+            <li ng-hide="login"><a href="/users/login">Sign In</a></li>
+            <li ng-hide="login"><a href="/users/new/account">Sign up</a></li>
+            <li ng-show="login" ng-click="logout()"><a >logout</a></li>
+            
+          </ul>
+         
+        </nav>
+      </div>
+
+      <div class="header__phone">
+        <b>1800-333-3333</b> <span class="header__phone__span"> — <span ng-show="bigHeader">call center schedule</span>  9:00 - 21:00</span>
+      </div>
+
+    </div>
+ 
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+    
+      <cart-informer informer></cart-informer>
+    </div>
+
+
+  </div>
+</div>

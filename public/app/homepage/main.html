@@ -1,0 +1,50 @@
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+  <div class="promo">
+    <div class="promo__offer promo__offer__2-3" style="width: 70.3% !important" >
+      <img src="uploads/promos/sale_big_3у.jpg" alt="" width="100%" />
+      <a href="/catalog"></a>
+    </div>
+
+    <div class="promo__offer promo__offer__1-3 hidden-sm hidden-xs" style="width: 24.77% !important;margin-left: 3.2% !important">
+      <img src="uploads/promos/main_look_base_notext.jpg" alt="" width="100%" />
+      <a >Cool skirts</a>
+    </div>
+  </div>
+
+
+  </div>
+
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  <div class="catalog margin-top-35">
+    <div class="catalog__title">
+      New collection summer 2015
+    </div>
+    <ul class="catalog__products">
+
+      <li class="catalog__products__item" ng-repeat="product in products.list | limitTo:8">
+<!--         <div class="catalog__image" ng-repeat="image in product.images | limitTo:1"> -->
+          <a href="/catalog/{{product.sku}}"><img alt="" ng-src="{{product.images}}" width="100%" /></a>
+<!--         </div> -->
+
+        <div class="catalog__products__item_annotation">
+
+          <div class="catalog__name">
+            <a href="/catalog/{{product.sku}}">{{product.title}} {{product.brand}}</a>
+          </div>
+
+          <div class="catalog__price">
+            <span class="catalog__price">
+                {{product.pricing | currency}}
+            </span>
+            <span class="catalog__price--old">
+                {{product.pricing.price}}
+            </span>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

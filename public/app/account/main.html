@@ -1,0 +1,64 @@
+<div class="col-md-12">
+    <div class="cart">
+        <h1>Past Orders {{ orderLen}} </h1>
+        <div class="cart__left">
+            <table class="cart__table">
+                <tr>
+                    <th>
+                        Order ID
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                     <th>
+                        Created Date
+                    </th>
+                </tr>
+                <tr ng-repeat="item in search_products">
+                    <td>
+                        
+
+                        <div class="cart__table__title">
+                            <div class="cart__table__title__name">
+                                {{item.id}}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="cart__table__price">
+                            {{item.amount}}
+                            
+                        </div>
+                       
+                    </td>
+                   <td>
+                        <div class="cart__table__price">
+                            {{item.created_date }}
+                            
+                        </div>
+                       
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="cart__right">
+            <div class="cart__summary">
+               
+
+                  
+                    <div class="cart__summary__sum_info">
+                        <ul>
+                            <li>Name: <span> <b>{{user.name}}</b></span></li>
+                          
+                            <li>Email: <span> <b>{{user.email}}</b></span></li>
+                           <li>Mobile: <span> <b>{{user.mobile}}</b></span></li>
+                        </ul>
+                    </div>
+                    
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
